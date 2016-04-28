@@ -1,10 +1,10 @@
-
 package statistics.matcher;
 
 import statistics.Player;
 
 public class Or implements Matcher {
-    private Matcher[] matchers;
+
+    private final Matcher[] matchers;
 
     public Or(Matcher... matchers) {
         this.matchers = matchers;
@@ -17,7 +17,6 @@ public class Or implements Matcher {
                 return true;
             }
         }
-
         return false;
     }
 }
